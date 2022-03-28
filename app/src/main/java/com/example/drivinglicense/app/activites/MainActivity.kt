@@ -1,4 +1,4 @@
-package com.example.drivinglicense
+package com.example.drivinglicense.app.activites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
