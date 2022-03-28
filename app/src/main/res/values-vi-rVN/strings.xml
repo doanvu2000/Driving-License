@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Ôn thi giấy phép lái xe</string>
+    <string name="license_a1">Giấp phép lái xe hạng A1</string>
+    <string name="license_a2">Giấp phép lái xe hạng A2</string>
+    <string name="text_chose_license_A1">Bạn chọn ôn luyện giấy phép hạng A1</string>
+    <string name="text_chose_license_A2">Bạn chọn ôn luyện giấy phép hạng A2</string>
 </resources>

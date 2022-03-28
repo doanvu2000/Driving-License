@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrivingLicense">
         <activity
-            android:name=".app.activites.MainActivity"
+            android:name=".app.activites.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Driving License</string>
+    <string name="license_a1">License A1</string>
+    <string name="license_a2">License A2</string>
+    <string name="text_chose_license_A1">You chose practice license A1</string>
+    <string name="text_chose_license_A2">You chose practice license A2</string>
 </resources>
