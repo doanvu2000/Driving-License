@@ -4,4 +4,9 @@
     <string name="license_a2">License A2</string>
     <string name="text_chose_license_A1">You chose practice license A1</string>
     <string name="text_chose_license_A2">You chose practice license A2</string>
+    <string name="text_exam">Driver\'s license test</string>
+    <string name="text_learning_theory">Learning theory</string>
+    <string name="text_road_signs">Road traffic signs</string>
+    <string name="text_tips">Tips for high results</string>
+    <string name="text_search_law">Law lookup</string>
 </resources>

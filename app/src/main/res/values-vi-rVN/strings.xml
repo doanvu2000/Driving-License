@@ -5,4 +5,9 @@
     <string name="license_a2">Giấp phép lái xe hạng A2</string>
     <string name="text_chose_license_A1">Bạn chọn ôn luyện giấy phép hạng A1</string>
     <string name="text_chose_license_A2">Bạn chọn ôn luyện giấy phép hạng A2</string>
+    <string name="text_exam">Thi sát hạch</string>
+    <string name="text_learning_theory">Học lý thuyết</string>
+    <string name="text_road_signs">Biển báo đường bộ</string>
+    <string name="text_tips">Mẹo đạt kết quả cao</string>
+    <string name="text_search_law">Tra cứu luật</string>
 </resources>
