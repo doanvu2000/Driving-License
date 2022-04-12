@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/DoAn/Driving License/app/src/main/res/drawable/bg_loading_dialog.xml" value="0.2855" />
+        <entry key="..\:/DoAn/Driving License/app/src/main/res/drawable/border_item.xml" value="0.215" />
         <entry key="..\:/DoAn/Driving License/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/DoAn/Driving License/app/src/main/res/layout/item_action_home.xml" value="0.3625" />
         <entry key="..\:/DoAn/Driving License/app/src/main/res/layout/loading_dialog.xml" value="0.3625" />
+        <entry key="..\:/DoAn/Driving License/app/src/main/res/menu/menu_setting.xml" value="0.3625" />
         <entry key="..\:/DoAn/Driving License/base/src/main/res/drawable/bg_loading_dialog.xml" value="0.2855" />
         <entry key="..\:/DoAn/Driving License/base/src/main/res/layout/bg_loading_dialog.xml" value="0.3625" />
         <entry key="..\:/DoAn/Driving License/base/src/main/res/layout/loading_dialog.xml" value="0.3625" />

@@ -84,5 +84,6 @@ dependencies {
     api 'com.android.support:multidex:1.0.3'
 
     implementation 'com.airbnb.android:lottie:3.7.2'
-
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
