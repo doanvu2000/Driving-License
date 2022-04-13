@@ -1,49 +1,36 @@
 package com.example.drivinglicense.app.activites
 
-import android.annotation.SuppressLint
-import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
-import android.widget.Toast
 import com.example.drivinglicense.R
 import com.example.drivinglicense.app.adapter.ActionAdapter
 import com.example.drivinglicense.app.entity.ItemAction
+import com.example.drivinglicense.component.activity.BaseCoreActivity
+import com.example.drivinglicense.component.navigator.openActivity
 import com.example.drivinglicense.component.widgets.recyclerview.RecyclerUtils
 import com.example.drivinglicense.databinding.ActivityMainBinding
 import com.example.drivinglicense.pref.showDevelopMessage
 import com.example.drivinglicense.pref.toastMessage
 import java.util.ArrayList
 
-class HomeActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
     private val actionAdapter by lazy {
         ActionAdapter()
     }
 
     private lateinit var listAction: MutableList<ItemAction>
 
-    @SuppressLint("ResourceAsColor")
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun initView() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.green)))
-        initView()
-        initData()
-        initListener()
-    }
-
-    private fun initView() {
+        supportActionBar?.title = getString(R.string.app_name) + " A1"
         initSlide()
     }
 
     private fun initSlide() {
-        val listSlide =
+        val listImageSlide =
             arrayListOf(
                 R.drawable.exam,
                 R.drawable.book,
@@ -51,12 +38,13 @@ class HomeActivity : AppCompatActivity() {
                 R.drawable.law,
                 R.drawable.stop
             )
-        for (item in listSlide) {
+        for (item in listImageSlide) {
             val imageView = ImageView(this)
             imageView.setImageResource(item)
             binding.slide.addView(imageView)
         }
-        binding.slide.flipInterval = 1500
+        //time to slide
+        binding.slide.flipInterval = 1700
         binding.slide.isAutoStart = true
         val animationSlideIn = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left)
         val animationSlideOut = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right)
@@ -64,7 +52,7 @@ class HomeActivity : AppCompatActivity() {
         binding.slide.outAnimation = animationSlideOut
     }
 
-    private fun initData() {
+    override fun initData() {
         RecyclerUtils.setGridManager(this, binding.rcvItem, 3, actionAdapter)
         listAction = ArrayList()
         val item1 = ItemAction(getString(R.string.text_exam), R.drawable.exam)
@@ -76,9 +64,33 @@ class HomeActivity : AppCompatActivity() {
         actionAdapter.addData(listAction)
     }
 
-    private fun initListener() {
+    override fun initListener() {
         actionAdapter.onCLickItem = {
-            toastMessage(this, listAction[it].title)
+            when (listAction[it].title) {
+                getString(R.string.text_exam) -> {
+                    /**Thi sát hạch*/
+                    openActivity(TestLicenseActivity::class.java, false)
+                }
+                getString(R.string.text_learning_theory) -> {
+                    /**Học lý thuyết*/
+                    openActivity(LearningTheoryActivity::class.java, false)
+                }
+                getString(R.string.text_road_signs) -> {
+                    /**Biển báo đường bộ*/
+                    openActivity(RoadTrafficSignsActivity::class.java, false)
+                }
+                getString(R.string.text_tips) -> {
+                    /**Mẹo đạt kết quả cao*/
+                    openActivity(TipsActivity::class.java, false)
+                }
+                getString(R.string.text_search_law) -> {
+                    /**Tra cứu luật*/
+                    openActivity(SearchLawActivity::class.java, false)
+                }
+                else -> {
+                    showDevelopMessage()
+                }
+            }
         }
     }
 
@@ -90,9 +102,11 @@ class HomeActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.item_license_A1 -> {
+                supportActionBar?.title = getString(R.string.app_name) + " A1"
                 toastMessage(this, getString(R.string.text_chose_license_A1))
             }
             R.id.item_license_A2 -> {
+                supportActionBar?.title = getString(R.string.app_name) + " A2"
                 toastMessage(this, getString(R.string.text_chose_license_A2))
             }
         }

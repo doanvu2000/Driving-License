@@ -3,6 +3,7 @@
     package="com.example.drivinglicense">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DrivingLicense">
+        <activity
+            android:name=".app.activites.SearchLawActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.activites.TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.activites.RoadTrafficSignsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.activites.LearningTheoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.activites.TestLicenseActivity"
+            android:exported="false" />
         <activity
             android:name=".app.activites.HomeActivity"
             android:exported="true">
