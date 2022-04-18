@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import com.example.drivinglicense.R
 import com.example.drivinglicense.app.adapter.ActionAdapter
 import com.example.drivinglicense.app.entity.ItemAction
@@ -24,7 +25,7 @@ class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
     private lateinit var listAction: MutableList<ItemAction>
 
     override fun initView() {
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.green)))
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.primary)))
         supportActionBar?.title = getString(R.string.app_name) + " A1"
         initSlide()
     }
