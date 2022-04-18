@@ -1,6 +1,7 @@
 package com.example.drivinglicense.pref
 
 import android.content.Context
+import android.view.View
 import android.widget.Toast
 
 private var toast: Toast? = null
@@ -19,5 +20,5 @@ fun toastMessage(context: Context, message: String) {
 }
 
 fun Context.showDevelopMessage() {
-    Toast.makeText(this, "develop", Toast.LENGTH_SHORT).show()
+    Toast.makeText(this, "Feature is development!", Toast.LENGTH_SHORT).show()
 }
