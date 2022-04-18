@@ -13,7 +13,7 @@ import com.example.drivinglicense.component.navigator.openActivity
 import com.example.drivinglicense.component.widgets.recyclerview.RecyclerUtils
 import com.example.drivinglicense.databinding.ActivityMainBinding
 import com.example.drivinglicense.pref.showDevelopMessage
-import com.example.drivinglicense.pref.toastMessage
+import com.example.drivinglicense.pref.showMessage
 import java.util.ArrayList
 
 class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
@@ -103,11 +103,11 @@ class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
         when (item.itemId) {
             R.id.item_license_A1 -> {
                 supportActionBar?.title = getString(R.string.app_name) + " A1"
-                toastMessage(this, getString(R.string.text_chose_license_A1))
+                showMessage(this, getString(R.string.text_chose_license_A1))
             }
             R.id.item_license_A2 -> {
                 supportActionBar?.title = getString(R.string.app_name) + " A2"
-                toastMessage(this, getString(R.string.text_chose_license_A2))
+                showMessage(this, getString(R.string.text_chose_license_A2))
             }
         }
         return false

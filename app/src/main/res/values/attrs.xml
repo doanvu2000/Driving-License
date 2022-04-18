@@ -17,4 +17,5 @@
         <attr name="drawable_start" format="reference" />
         <attr name="drawable_end" format="reference" />
     </declare-styleable>
+
 </resources>

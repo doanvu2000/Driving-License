@@ -11,4 +11,6 @@
     <string name="text_tips">Mẹo đạt kết quả cao</string>
     <string name="text_search_law">Tra cứu luật</string>
     <string name="text_create_random_exam">Tạo đề thi ngẫu nhiên</string>
+    <string name="text_cancel">Hủy</string>
+    <string name="text_confirm">Đồng ý</string>
 </resources>
