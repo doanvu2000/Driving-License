@@ -8,7 +8,7 @@ import android.widget.LinearLayout
 import com.example.drivinglicense.R
 import com.example.drivinglicense.databinding.ToolbarAppBinding
 
-class ToolBarApp: LinearLayout {
+class ToolBarApp : LinearLayout {
     var onLeftClickListener: (() -> Unit)? = null
     var onRightClickListener: (() -> Unit)? = null
 
@@ -28,7 +28,6 @@ class ToolBarApp: LinearLayout {
 
     private fun initView(attrs: AttributeSet?) {
         attrs?.let {
-            val o = context.obtainStyledAttributes(attrs,R.styleable.ToolBarApp)
             val obtain = context.obtainStyledAttributes(attrs, R.styleable.ToolBarApp)
             val title = obtain.getString(R.styleable.ToolBarApp_title)
             val iconLeft = obtain.getDrawable(R.styleable.ToolBarApp_drawable_start)
@@ -90,6 +89,12 @@ class ToolBarApp: LinearLayout {
         } else {
             binding.imageRight.visibility = View.VISIBLE
             binding.imageRight.setImageResource(id)
+        }
+    }
+
+    fun setTitleColor(color: Int) {
+        if (color != 0) {
+            binding.textTitle.setTextColor(color)
         }
     }
 }

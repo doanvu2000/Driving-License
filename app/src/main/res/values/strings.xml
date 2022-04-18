@@ -10,4 +10,6 @@
     <string name="text_tips">Tips for high results</string>
     <string name="text_search_law">Law lookup</string>
     <string name="text_create_random_exam">Create random exam</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_confirm">Confirm</string>
 </resources>
