@@ -1,6 +1,7 @@
 package com.example.drivinglicense.app.activites
 
 import android.graphics.drawable.ColorDrawable
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.animation.AnimationUtils
@@ -15,6 +16,8 @@ import com.example.drivinglicense.component.widgets.recyclerview.RecyclerUtils
 import com.example.drivinglicense.databinding.ActivityMainBinding
 import com.example.drivinglicense.pref.showDevelopMessage
 import com.example.drivinglicense.pref.showMessage
+import com.example.drivinglicense.utils.getListQuestionImportant
+import okhttp3.internal.filterList
 import java.util.ArrayList
 
 class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
@@ -63,6 +66,8 @@ class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
         val item5 = ItemAction(getString(R.string.text_search_law), R.drawable.law)
         listAction = arrayListOf(item1, item2, item3, item4, item5)
         actionAdapter.addData(listAction)
+        val importantListQuestion = getListQuestionImportant(this)
+        Log.d("TAG", "initData: ${importantListQuestion}")
     }
 
     override fun initListener() {

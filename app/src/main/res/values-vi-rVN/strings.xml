@@ -13,4 +13,27 @@
     <string name="text_create_random_exam">Tạo đề thi ngẫu nhiên</string>
     <string name="text_cancel">Hủy</string>
     <string name="text_confirm">Đồng ý</string>
+
+    <!--Câu hỏi điểm liệt (60)-->
+    <string name="question_important_1">Hành vi nào dưới đây bị nghiêm cấm</string>
+    <string name="question_important_2">Hành vi đua xe cơ giới, xe máy chuyên dùng không bảo đảm tiêu chuẩn an toàn kỹ thuật và bảo vệ môi trường vào tham gia giao thông đường bộ có bị nghiêm cấm hay không?</string>
+    <string name="question_important_3">Cuộc đua xe chỉ được thực hiện khi nào?</string>
+    <string name="question_important_4">Người điều khiển phương tiện giao thông đường bộ mà trong cơ thể có chất ma túy có bị nghiêm cấm hay không?</string>
+    <string name="question_important_5">Việc lái xe mô tô, ô tô, máy kéo ngay sau khi uống rượu, bia có được phép hay không?</string>
+    <string name="question_important_6">Người điều khiển xe ô tô, mô tô, máy kéo trên đường mà trong máu hoặc hơi thở có nồng độ cồn có bị nghiêm cấm không?</string>
+    <string name="question_important_7">Sử dụng rượu, bia khi lái xe, nế bị phát hiện thì bị xử lý như thế nào?</string>
+    <string name="question_important_8">Theo Luật phòng chống tác hại của rượu, bia, đối tượng nào dưới đây bị cấm sử dụng rượu, bia khi tham gia giao thông</string>
+    <string name="question_important_9">Hành vi giao xe cơ giới, xe máy chuyên dùng cho người không đủ điều kiện để điều khiển xe tham gia giao thông có được phép hay không?</string>
+    <string name="question_important_10">Hành vi điều khiển xe cơ giới chạy quá tốc độ quy định, giành đường, vượt ẩu có bị nghiêm cấm hay không?</string>
+    <string name="question_important_11">Confirm2</string>
+    <string name="question_important_12">Confirm3</string>
+    <string name="question_important_13">Confirm4</string>
+    <string name="question_important_14">Confirma</string>
+    <string name="question_important_15">Confirms</string>
+    <string name="question_important_16">Confirms</string>
+    <string name="question_important_17">Confirms</string>
+    <string name="question_important_18">Confirms</string>
+    <string name="question_important_19">Confirms</string>
+    <string name="question_important_20">Confirms</string>
+
 </resources>

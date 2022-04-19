@@ -2,6 +2,7 @@ package com.example.drivinglicense.app.activites
 
 import android.graphics.Color
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.drivinglicense.R
 import com.example.drivinglicense.app.adapter.ExamAdapter
 import com.example.drivinglicense.component.activity.BaseCoreActivity

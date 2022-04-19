@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Driving License</string>
     <string name="license_a1">License A1</string>
@@ -12,4 +13,26 @@
     <string name="text_create_random_exam">Create random exam</string>
     <string name="text_cancel">Cancel</string>
     <string name="text_confirm">Confirm</string>
+
+    <!--Câu hỏi điểm liệt (60)-->
+    <string name="question_important_1">Which of the following acts are prohibited?</string>
+    <string name="question_important_2">Is the act of racing motor vehicles and special-use motorcycles not up to the standards of technical safety and environmental protection in road traffic?</string>
+    <string name="question_important_3">When is the vehicle race only done?</string>
+    <string name="question_important_4">Is it prohibited to drive a road vehicle with drugs?</string>
+    <string name="question_important_5">After drinking alcohol, is it possible to drive motorcycles, cars, or tractors right after that?</string>
+    <string name="question_important_6">Is it prohibited to operate a car, motorcycle, or tractor on the road with alcohol in the blood or breath?</string>
+    <string name="question_important_7">Using alcohol while driving, if detected, how to handle?</string>
+    <string name="question_important_8">According to the Law on Prevention of Harmful Effects of Alcohol and Beer, which of the following subjects are prohibited from using alcohol while participating in traffic?</string>
+    <string name="question_important_9">Is the act of delivering motor vehicles or special-use motorcycles to people who are not eligible to drive vehicles in traffic?</string>
+    <string name="question_important_10">Is the act of driving a vehicle exceeding the prescribed speed, entering lanes, or overtaking carelessly?</string>
+    <string name="question_important_11">Confirm</string>
+    <string name="question_important_12">Confirm</string>
+    <string name="question_important_13">Confirm</string>
+    <string name="question_important_14">Confirm</string>
+    <string name="question_important_15">Confirm</string>
+    <string name="question_important_16">Confirm</string>
+    <string name="question_important_17">Confirm</string>
+    <string name="question_important_18">Confirm</string>
+    <string name="question_important_19">Confirm</string>
+    <string name="question_important_20">Confirm</string>
 </resources>
