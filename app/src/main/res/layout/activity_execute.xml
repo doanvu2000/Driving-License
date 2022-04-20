@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.activites.LearningTheoryActivity">
+    tools:context=".app.activites.ExecuteActivity">
 
     <com.example.drivinglicense.component.toolbar.ToolBarApp
         android:id="@+id/toolbar"
@@ -15,14 +15,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:id="@+id/btn60"
-        android:layout_width="wrap_content"
+    <include
+        android:id="@+id/layout_content"
+        layout="@layout/layout_question_answer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_button_blue"
+        android:gravity="center"
         android:padding="10dp"
-        android:text="60 Câu hỏi lý thuyết"
-        android:textColor="@color/white"
-        tools:ignore="MissingConstraints" />
+        android:text="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

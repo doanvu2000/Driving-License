@@ -13,6 +13,7 @@
     <string name="text_create_random_exam">Tạo đề thi ngẫu nhiên</string>
     <string name="text_cancel">Hủy</string>
     <string name="text_confirm">Đồng ý</string>
+    <string name="text_explain_answer">Giải thích đáp án</string>
 
     <!--Câu hỏi điểm liệt (60)-->
     <string name="question_important_1">Hành vi nào dưới đây bị nghiêm cấm</string>
@@ -36,4 +37,14 @@
     <string name="question_important_19">Confirms</string>
     <string name="question_important_20">Confirms</string>
 
+    <!--Câu trả lời câu hỏi điểm liệt-->
+
+    <string name="answer_important_1_1">Đỗ xe trên đường phố</string>
+    <string name="answer_important_1_2">Sử dụng xe đạp đi trên các tuyến quốc lộ có tốc độ cao.</string>
+    <string name="answer_important_1_3">Làm hỏng (cố ý) cọc tiêu, gương cầu, dải phân cách.</string>
+    <string name="answer_important_1_4">Sử dụng còi và quay đầu xe trong khu dân cư.</string>
+    <string name="answer_important_2_1">Không nghiêm cấm.</string>
+    <string name="answer_important_2_2">Bị nghiêm cấm.</string>
+    <string name="answer_important_2_3">Bị nghiêm cấm tùy theo các tuyến đường.</string>
+    <string name="answer_important_2_4">Bị nghiêm cấm tùy theo loại xe</string>
 </resources>

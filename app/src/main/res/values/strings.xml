@@ -13,6 +13,7 @@
     <string name="text_create_random_exam">Create random exam</string>
     <string name="text_cancel">Cancel</string>
     <string name="text_confirm">Confirm</string>
+    <string name="text_explain_answer">Explain the answer</string>
 
     <!--Câu hỏi điểm liệt (60)-->
     <string name="question_important_1">Which of the following acts are prohibited?</string>
@@ -35,4 +36,15 @@
     <string name="question_important_18">Confirm</string>
     <string name="question_important_19">Confirm</string>
     <string name="question_important_20">Confirm</string>
+
+    <!--Câu trả lời câu hỏi điểm liệt-->
+
+    <string name="answer_important_1_1">Parking on the street</string>
+    <string name="answer_important_1_2">Use the bike on the highway at high speed.</string>
+    <string name="answer_important_1_3">Damage (intentionally) target stake, spherical mirror, median line.</string>
+    <string name="answer_important_1_4">Use your horn and make a U-turn in a residential area.</string>
+    <string name="answer_important_2_1">Not strictly prohibited.</string>
+    <string name="answer_important_2_2">Prohibited.</string>
+    <string name="answer_important_2_3">Prohibited depending on the route.</string>
+    <string name="answer_important_2_4">Prohibited depending on vehicle type</string>
 </resources>
