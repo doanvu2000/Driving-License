@@ -1,7 +1,6 @@
 package com.example.drivinglicense.app.activites
 
 import android.graphics.drawable.ColorDrawable
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.animation.AnimationUtils
@@ -17,8 +16,7 @@ import com.example.drivinglicense.databinding.ActivityMainBinding
 import com.example.drivinglicense.pref.showDevelopMessage
 import com.example.drivinglicense.pref.showMessage
 import com.example.drivinglicense.utils.getListQuestionImportant
-import okhttp3.internal.filterList
-import java.util.ArrayList
+import com.example.drivinglicense.utils.initList
 
 class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
     private val actionAdapter by lazy {
@@ -28,7 +26,14 @@ class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
     private lateinit var listAction: MutableList<ItemAction>
 
     override fun initView() {
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.primary)))
+        supportActionBar?.setBackgroundDrawable(
+            ColorDrawable(
+                ContextCompat.getColor(
+                    this,
+                    R.color.primary
+                )
+            )
+        )
         supportActionBar?.title = getString(R.string.app_name) + " A1"
         initSlide()
     }
@@ -66,8 +71,8 @@ class HomeActivity : BaseCoreActivity<ActivityMainBinding>() {
         val item5 = ItemAction(getString(R.string.text_search_law), R.drawable.law)
         listAction = arrayListOf(item1, item2, item3, item4, item5)
         actionAdapter.addData(listAction)
+        initList(this)
         val importantListQuestion = getListQuestionImportant(this)
-        Log.d("TAG", "initData: ${importantListQuestion}")
     }
 
     override fun initListener() {
