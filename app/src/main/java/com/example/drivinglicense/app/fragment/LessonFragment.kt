@@ -1,29 +1,30 @@
-package com.example.drivinglicense.app.activites
+package com.example.drivinglicense.app.fragment
 
 import android.annotation.SuppressLint
-import android.graphics.Color
+import android.os.Bundle
+import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
-import androidx.core.content.ContextCompat
+import android.view.ViewGroup
 import com.example.drivinglicense.R
 import com.example.drivinglicense.app.adapter.AnswerAdapter
 import com.example.drivinglicense.app.entity.Answer
+import com.example.drivinglicense.app.entity.Question
 import com.example.drivinglicense.app.viewmodel.MapDataViewModel
-import com.example.drivinglicense.component.activity.BaseVMActivity
+import com.example.drivinglicense.component.fragment.BaseFragment
 import com.example.drivinglicense.component.widgets.recyclerview.RecyclerUtils
-import com.example.drivinglicense.databinding.ActivityExecuteBinding
+import com.example.drivinglicense.databinding.FragmentLessonBinding
 import com.example.drivinglicense.databinding.LayoutQuestionAnswerBinding
-import com.example.drivinglicense.utils.TITLE_TOOLBAR
+import com.example.drivinglicense.pref.showMessage
+import com.example.drivinglicense.utils.getListQuestionImportant
 
-class ExecuteActivity : BaseVMActivity<ActivityExecuteBinding, MapDataViewModel>() {
-
-    var titleToolbar = ""
-
-    /**
-     * key: questionId
-     * value: list answer of question
-     * */
-
-    var mapAnswer = HashMap<Int, MutableList<Answer>>()
+class LessonFragment(
+    private val question: Question,
+    private val listAnswer: MutableList<Answer>,
+    val flag: Int
+) :
+    BaseFragment<FragmentLessonBinding, MapDataViewModel>() {
 
     private val bindingContent by lazy {
         LayoutQuestionAnswerBinding.bind(binding.root)
@@ -33,22 +34,13 @@ class ExecuteActivity : BaseVMActivity<ActivityExecuteBinding, MapDataViewModel>
     }
 
     override fun initView() {
-        setupToolBar()
+        bindingContent.textQuestionContent.text = question.content
         RecyclerUtils.setGridManager(this, bindingContent.rcvAnswers, answerAdapter)
-    }
-
-    private fun setupToolBar() {
-        titleToolbar = intent.extras?.getString(TITLE_TOOLBAR) ?: "Ôn luyện"
-        binding.toolbar.setTitle(titleToolbar)
-        binding.toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.primary))
-        binding.toolbar.setTitleColor(Color.WHITE)
-        binding.toolbar.setIconLeft(R.drawable.icon_back_white)
-        binding.toolbar.setIconRight(R.drawable.icon_info)
+        Log.d("TAG", "initView:  ${question.questionId}")
     }
 
     @SuppressLint("NotifyDataSetChanged")
     override fun initListener() {
-        binding.toolbar.onLeftClickListener = { onBackPressed() }
         answerAdapter.setOnClickItemRecyclerView { answer, _ ->
             if (answer.isCorrect) {
                 bindingContent.layoutEx.visibility = View.VISIBLE
@@ -66,15 +58,11 @@ class ExecuteActivity : BaseVMActivity<ActivityExecuteBinding, MapDataViewModel>
         }
     }
 
-
     override fun initData() {
-        bindingContent.textQuestionContent.text = getString(R.string.question_important_3)
-        viewModel.getAnswerWithQuestionImportant()
-        val listAnswer = viewModel.mapAnswer[3]
-        if (listAnswer != null) {
-            answerAdapter.addData(listAnswer)
-        }
+        answerAdapter.addData(listAnswer)
+    }
 
+    override fun onSingleClick(v: View) {
     }
 
 }

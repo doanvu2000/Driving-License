@@ -11,7 +11,7 @@ import com.example.drivinglicense.app.entity.Question
 /**Câu hỏi điểm liệt*/ //60
 fun getListQuestionImportant(context: Context): MutableList<Question> {
     val list = mutableListOf<Question>()
-    for (i in 1..20) {
+    for (i in 1..10) {
         val id =
             context.resources.getIdentifier("question_important_$i", "string", context.packageName)
         if (id > 0) {
