@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrivingLicense">
         <activity
+            android:name=".app.activites.TestViewPagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".app.activites.ExecuteActivity"
             android:exported="false" />
         <activity

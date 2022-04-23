@@ -64,4 +64,6 @@
     <string name="answer_important_3_1">Taking place on a street with no passersby.</string>
     <string name="answer_important_3_2">Supported by the people.</string>
     <string name="answer_important_3_3">Licensed by the competent authority.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
